@@ -1,12 +1,12 @@
 <?php
-namespace Xaamin\Whatsapi\Events;
+namespace Gentrobot\Whatsapi\Events;
 
 use WhatsProt;
 use Exception;
 use Registration;
 use WhatsApiEventsManager;
-use Xaamin\Whatsapi\Sessions\SessionInterface;
-use Xaamin\Whatsapi\Contracts\ListenerInterface;
+use Gentrobot\Whatsapi\Sessions\SessionInterface;
+use Gentrobot\Whatsapi\Contracts\ListenerInterface;
 
 class Listener
 {
@@ -20,7 +20,7 @@ class Listener
     /**
      * Holds SessionInterface implementation
      * 
-     * @var Xaamin\Whatsapi\Sessions\SessionInterface
+     * @var Gentrobot\Whatsapi\Sessions\SessionInterface
      */
     protected $session;
 
@@ -60,7 +60,7 @@ class Listener
     /**
      * Binds the requested events to the WhatsProt event manager.
      * 
-     * @return \Xaamin\Whatsapi\Events\Listener
+     * @return \Gentrobot\Whatsapi\Events\Listener
      */
     public function registerWhatsProtEvents(WhatsProt $whatsProt)
     {
@@ -70,7 +70,7 @@ class Listener
     /**
      * Binds the requested events to the Registration event manager.
      * 
-     * @return \Xaamin\Whatsapi\Events\Listener
+     * @return \Gentrobot\Whatsapi\Events\Listener
      */
     public function registerRegistrationEvents(Registration $registration)
     {
@@ -80,7 +80,7 @@ class Listener
     /**
      * Binds events to the WhatsApiEventsManager
      * @param  \WhatsApiEventsManager $manager
-     * @return \Xaamin\Whatsapi\Events\Listener
+     * @return \Gentrobot\Whatsapi\Events\Listener
      */
     protected function registerEvents(WhatsApiEventsManager $manager)
     {

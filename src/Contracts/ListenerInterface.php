@@ -1,5 +1,5 @@
 <?php 
-namespace Xaamin\Whatsapi\Contracts;
+namespace Gentrobot\Whatsapi\Contracts;
 
 interface ListenerInterface 
 {

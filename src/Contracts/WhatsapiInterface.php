@@ -1,8 +1,8 @@
 <?php 
-namespace Xaamin\Whatsapi\Contracts;
+namespace Gentrobot\Whatsapi\Contracts;
 
 use Closure;
-use Xaamin\Whatsapi\Media\VCard;
+use Gentrobot\Whatsapi\Media\VCard;
 
 interface WhatsapiInterface 
 {
@@ -53,7 +53,7 @@ interface WhatsapiInterface
      *             'tel' => '9611111111',
      *             ));
      *     
-     *         $message->vcard('Xaamin Mat', $vcard);
+     *         $message->vcard('Gentrobot Mat', $vcard);
      *         
      *         // Add new text message
      *         $message->message('Thanks in advanced');

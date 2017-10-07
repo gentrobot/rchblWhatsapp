@@ -1,15 +1,15 @@
 {
-    "name": "xaamin/whatsapi",
+    "name": "gentrobot/whatsapi",
     "description": "Wrapper for Whatsapp messenger",
     "license": "MIT",
     "keywords": [
-        "whatsapp",
-        "whatsapi",
-        "laravel",
-        "chat",
-        "messenger"
+        
     ],
     "authors": [
+        {
+            "name": "Mohsin",
+            "email": "mohsin@ideanub.com"
+        },
         {
             "name": "Benjamín Martínez Mateos",
             "email": "bmxamin@gmail.com"
@@ -17,14 +17,14 @@
     ],
     "require": {
         "php": ">=5.6",        
-        "whatsapp/chat-api": "^3.2"
+        "gentrobot/chat-api": "*"
     },
     "suggest": {
         "illuminate/support": "For use on Laravel 5."
     },
     "autoload": {
         "psr-4": {
-            "Xaamin\\Whatsapi\\": "src/"
+            "Gentrobot\\Whatsapi\\": "src/"
         }
     }
 }

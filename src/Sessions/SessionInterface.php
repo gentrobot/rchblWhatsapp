@@ -1,5 +1,5 @@
 <?php 
-namespace Xaamin\Whatsapi\Sessions;
+namespace Gentrobot\Whatsapi\Sessions;
 
 interface SessionInterface {
 	

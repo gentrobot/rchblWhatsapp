@@ -1,7 +1,7 @@
 <?php 
-namespace Xaamin\Whatsapi\Sessions\Native;
+namespace Gentrobot\Whatsapi\Sessions\Native;
 
-use Xaamin\Whatsapi\Sessions\SessionInterface;
+use Gentrobot\Whatsapi\Sessions\SessionInterface;
 
 class Session implements SessionInterface {
 

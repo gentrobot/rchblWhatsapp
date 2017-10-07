@@ -1,8 +1,8 @@
 <?php 
-namespace Xaamin\Whatsapi\Sessions\Laravel;
+namespace Gentrobot\Whatsapi\Sessions\Laravel;
 
 use Illuminate\Session\Store as SessionStore;
-use Xaamin\Whatsapi\Sessions\SessionInterface;
+use Gentrobot\Whatsapi\Sessions\SessionInterface;
 
 class Session implements SessionInterface {
 	

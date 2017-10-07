@@ -1,22 +1,22 @@
 <?php 
-namespace Xaamin\Whatsapi\Facades\Native;
+namespace Gentrobot\Whatsapi\Facades\Native;
 
-use Xaamin\Whatsapi\Sessions\SessionInterface;
-use Xaamin\Whatsapi\Contracts\ListenerInterface;
+use Gentrobot\Whatsapi\Sessions\SessionInterface;
+use Gentrobot\Whatsapi\Contracts\ListenerInterface;
 
 trait ResourceTrait
 {	
     /**
      * SessionInterface implementation
      * 
-     * @var Xaamin\Whatsapi\Sessions\SessionInterface
+     * @var Gentrobot\Whatsapi\Sessions\SessionInterface
      */
 	protected static $session;
 
 	/**
      * ListenerInterface implementation
      * 
-     * @var \Xaamin\Whatsapi\Contracts\ListenerInterface
+     * @var \Gentrobot\Whatsapi\Contracts\ListenerInterface
      */
 	protected static $listener;
 
@@ -30,7 +30,7 @@ trait ResourceTrait
     /**
      * Sets the session manager
      * 
-     * @param \Xaamin\Whatsapi\Sessions\SessionInterface $session
+     * @param \Gentrobot\Whatsapi\Sessions\SessionInterface $session
      */
     public static function setSessionManager(SessionInterface $session)
     {
@@ -40,7 +40,7 @@ trait ResourceTrait
     /**
      * Sets the event listener
      * 
-     * @param Xaamin\Whatsapi\Contracts\ListenerInterface $listener
+     * @param Gentrobot\Whatsapi\Contracts\ListenerInterface $listener
      */
     public static function setEventListener(ListenerInterface $listener)
     {

@@ -1,5 +1,5 @@
 <?php
-namespace Xaamin\Whatsapi\Media;
+namespace Gentrobot\Whatsapi\Media;
 
 use stdClass;
 use Exception;

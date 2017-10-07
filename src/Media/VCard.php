@@ -1,5 +1,5 @@
 <?php
-namespace Xaamin\Whatsapi\Media;
+namespace Gentrobot\Whatsapi\Media;
 
 /** 
  * A class to generate vCards for contact data.

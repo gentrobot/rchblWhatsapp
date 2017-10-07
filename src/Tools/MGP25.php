@@ -1,11 +1,11 @@
 <?php 
-namespace Xaamin\Whatsapi\Tools;
+namespace Gentrobot\Whatsapi\Tools;
 
 use WhatsProt;
 use Registration;
-use Xaamin\Whatsapi\Events\Listener;
-use Xaamin\Whatsapi\Contracts\ListenerInterface;
-use Xaamin\Whatsapi\Contracts\WhatsapiToolInterface;
+use Gentrobot\Whatsapi\Events\Listener;
+use Gentrobot\Whatsapi\Contracts\ListenerInterface;
+use Gentrobot\Whatsapi\Contracts\WhatsapiToolInterface;
 
 class MGP25 implements WhatsapiToolInterface
 {
@@ -25,7 +25,7 @@ class MGP25 implements WhatsapiToolInterface
     /**
      * Event Registrarion listener 
      * 
-     * @var \Xaamin\Whatsapi\Events\Listener
+     * @var \Gentrobot\Whatsapi\Events\Listener
      */
     private $listener;
 
@@ -39,7 +39,7 @@ class MGP25 implements WhatsapiToolInterface
     /**
      * Sets the Whatsapi event listener
      * 
-     * @param  \Xaamin\Whatsapi\Contracts\ListenerInterface $listener 
+     * @param  \Gentrobot\Whatsapi\Contracts\ListenerInterface $listener 
      * @return void
      */
     public function setListener(ListenerInterface $listener)

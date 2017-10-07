@@ -1,19 +1,19 @@
 <?php 
-namespace Xaamin\Whatsapi\Facades\Native;
+namespace Gentrobot\Whatsapi\Facades\Native;
 
 abstract class Facade {
 
 	/**
 	 * WhatsapiInterface implementation.
 	 *
-	 * @var Xaamin\Whatsapi\Contracts\WhatsapiInterface
+	 * @var Gentrobot\Whatsapi\Contracts\WhatsapiInterface
 	 */
 	protected static $instance;
 
 	/**
 	 * Returns the implementation implementation registered with the Facade.
 	 *
-	 * @return Xaamin\Whatsapi\Contracts\WhatsapiInterface
+	 * @return Gentrobot\Whatsapi\Contracts\WhatsapiInterface
 	 */
 	public static function instance()
 	{

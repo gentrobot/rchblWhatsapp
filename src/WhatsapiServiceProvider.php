@@ -1,5 +1,5 @@
 <?php 
-namespace Xaamin\Whatsapi;
+namespace Gentrobot\Whatsapi;
 
 use Config;
 use WhatsProt;
@@ -67,64 +67,64 @@ class WhatsapiServiceProvider extends ServiceProvider
 
     private function registerEventListener()
     {
-        $this->app->singleton('Xaamin\Whatsapi\Events\Listener', function($app)
+        $this->app->singleton('Gentrobot\Whatsapi\Events\Listener', function($app)
         {   
-            $session = $app->make('Xaamin\Whatsapi\Sessions\SessionInterface');
+            $session = $app->make('Gentrobot\Whatsapi\Sessions\SessionInterface');
 
-            return new \Xaamin\Whatsapi\Events\Listener($session, Config::get('whatsapi'));
+            return new \Gentrobot\Whatsapi\Events\Listener($session, Config::get('whatsapi'));
         });
     }
 
     private function registerMediaManager()
     {
-        $this->app->singleton('Xaamin\Whatsapi\Media\Media', function($app)
+        $this->app->singleton('Gentrobot\Whatsapi\Media\Media', function($app)
         {   
-            return new \Xaamin\Whatsapi\Media\Media(Config::get('whatsapi.data-storage') . '/media');
+            return new \Gentrobot\Whatsapi\Media\Media(Config::get('whatsapi.data-storage') . '/media');
         });
     }
 
     private function registerMessageManager()
     {
-        $this->app->singleton('Xaamin\Whatsapi\MessageManager', function($app)
+        $this->app->singleton('Gentrobot\Whatsapi\MessageManager', function($app)
         {   
-            $media = $app->make('Xaamin\Whatsapi\Media\Media');
+            $media = $app->make('Gentrobot\Whatsapi\Media\Media');
 
-            return new \Xaamin\Whatsapi\MessageManager($media);
+            return new \Gentrobot\Whatsapi\MessageManager($media);
         });
     }
 
     private function registerSessionManager()
     {
-        $this->app->singleton('Xaamin\Whatsapi\Sessions\SessionInterface', function ($app)
+        $this->app->singleton('Gentrobot\Whatsapi\Sessions\SessionInterface', function ($app)
         {
-             return $app->make('Xaamin\Whatsapi\Sessions\Laravel\Session');
+             return $app->make('Gentrobot\Whatsapi\Sessions\Laravel\Session');
         });
     }
 
     private function registerWhatsapi()
     {
-        $this->app->singleton('Xaamin\Whatsapi\Contracts\WhatsapiInterface', function ($app)
+        $this->app->singleton('Gentrobot\Whatsapi\Contracts\WhatsapiInterface', function ($app)
         {
              // Dependencies
              $whatsProt = $app->make('WhatsProt');
-             $manager = $app->make('Xaamin\Whatsapi\MessageManager');
-             $session = $app->make('Xaamin\Whatsapi\Sessions\SessionInterface');
-             $listener = $app->make('Xaamin\Whatsapi\Events\Listener');
+             $manager = $app->make('Gentrobot\Whatsapi\MessageManager');
+             $session = $app->make('Gentrobot\Whatsapi\Sessions\SessionInterface');
+             $listener = $app->make('Gentrobot\Whatsapi\Events\Listener');
 
              $config = Config::get('whatsapi');
 
-             return new \Xaamin\Whatsapi\Clients\MGP25($whatsProt, $manager, $listener, $session, $config);
+             return new \Gentrobot\Whatsapi\Clients\MGP25($whatsProt, $manager, $listener, $session, $config);
         });
 
     }
 
     private function registerRegistrationTool()
     {
-        $this->app->singleton('Xaamin\Whatsapi\Contracts\WhatsapiToolInterface', function($app)
+        $this->app->singleton('Gentrobot\Whatsapi\Contracts\WhatsapiToolInterface', function($app)
         {
-            $listener = $app->make('Xaamin\Whatsapi\Events\Listener');
+            $listener = $app->make('Gentrobot\Whatsapi\Events\Listener');
 
-            return new \Xaamin\Whatsapi\Tools\MGP25($listener, Config::get('whatsapi.debug'), Config::get('whatsapi.data-storage'));
+            return new \Gentrobot\Whatsapi\Tools\MGP25($listener, Config::get('whatsapi.debug'), Config::get('whatsapi.data-storage'));
         });
     }
 
@@ -135,6 +135,6 @@ class WhatsapiServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['Xaamin\Whatsapi\Contracts\WhatsapiInterface', 'Xaamin\Whatsapi\Contracts\WhatsapiToolInterface'];
+        return ['Gentrobot\Whatsapi\Contracts\WhatsapiInterface', 'Gentrobot\Whatsapi\Contracts\WhatsapiToolInterface'];
     }
 }

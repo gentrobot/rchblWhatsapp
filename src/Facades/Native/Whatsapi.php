@@ -1,13 +1,13 @@
 <?php 
-namespace Xaamin\Whatsapi\Facades\Native;
+namespace Gentrobot\Whatsapi\Facades\Native;
 
 use WhatsProt;
 use UnexpectedValueException;
-use Xaamin\Whatsapi\Media\Media;
-use Xaamin\Whatsapi\Clients\MGP25;
-use Xaamin\Whatsapi\MessageManager;
-use Xaamin\Whatsapi\Events\Listener;
-use Xaamin\Whatsapi\Sessions\Native\Session;
+use Gentrobot\Whatsapi\Media\Media;
+use Gentrobot\Whatsapi\Clients\MGP25;
+use Gentrobot\Whatsapi\MessageManager;
+use Gentrobot\Whatsapi\Events\Listener;
+use Gentrobot\Whatsapi\Sessions\Native\Session;
 
 class Whatsapi extends Facade 
 {	

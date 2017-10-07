@@ -1,17 +1,17 @@
 <?php 
-namespace Xaamin\Whatsapi;
+namespace Gentrobot\Whatsapi;
 
 use stdClass;
-use Xaamin\Whatsapi\Media\VCard;
-use Xaamin\Whatsapi\Media\Media;
-use Xaamin\Whatsapi\Media\VCardReader;
+use Gentrobot\Whatsapi\Media\VCard;
+use Gentrobot\Whatsapi\Media\Media;
+use Gentrobot\Whatsapi\Media\VCardReader;
 
 class MessageManager
 {
     /**
      * Media instance
      * 
-     * @var \Xaamin\Whatsapi\Media\Media
+     * @var \Gentrobot\Whatsapi\Media\Media
      */
     protected $media;
 
@@ -39,7 +39,7 @@ class MessageManager
     /**
      * Constructor
      * 
-     * @param \Xaamin\Whatsapi\Media\Media $media
+     * @param \Gentrobot\Whatsapi\Media\Media $media
      */
     public function __construct(Media $media)
     {
@@ -124,7 +124,7 @@ class MessageManager
      *         $send->to('5219622222222');
      * 
      *         // From local storage
-     *         $send->audio('/home/xaamin/example.mp3');
+     *         $send->audio('/home/Gentrobot/example.mp3');
      * 
      *         // or from web url
      *         $send->audio('http://itnovado.com/example.mp3');
@@ -148,7 +148,7 @@ class MessageManager
      *         $send->to('5219622222222');
      * 
      *         // From local storage
-     *         $send->image('/home/xaamin/example.jpg', 'Cool image');
+     *         $send->image('/home/Gentrobot/example.jpg', 'Cool image');
      * 
      *         // or from web url
      *         $send->image('http://itnovado.com/example.jpg', 'Cool image');
@@ -198,7 +198,7 @@ class MessageManager
      * 
      * <code>
      *     // Create VCard Instance
-     *     $vcard = new Xaamin\Whatsapi\Media\VCard();
+     *     $vcard = new Gentrobot\Whatsapi\Media\VCard();
      *     
      *     // Set properties
      *     $vcard->set('data', array(
@@ -208,10 +208,10 @@ class MessageManager
      *     ));
      *     
      *     // Send
-     *     WA::send('Hi, meet to Xaamin !', function($send) use ($vcard)
+     *     WA::send('Hi, meet to Gentrobot !', function($send) use ($vcard)
      *     {
      *         $send->to('5219622222222');
-     *         $send->vcard('Xaamin Mat', $vcard);
+     *         $send->vcard('Gentrobot Mat', $vcard);
      *     }):
      * </code>
      * 
@@ -238,7 +238,7 @@ class MessageManager
      *         $send->to('5219622222222');
      * 
      *         // From local storage
-     *         $send->video('/home/xaamin/example.mp4', 'Fun video');
+     *         $send->video('/home/Gentrobot/example.mp4', 'Fun video');
      * 
      *         // or from web url
      *         $send->video('http://itnovado.com/example.mp4', 'Fun video');

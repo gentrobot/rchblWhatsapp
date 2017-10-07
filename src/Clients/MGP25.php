@@ -1,16 +1,16 @@
 <?php 
-namespace Xaamin\Whatsapi\Clients;
+namespace Gentrobot\Whatsapi\Clients;
 
 use Closure;
 use stdClass;
 use Exception;
 use WhatsProt;
-use Xaamin\Whatsapi\Media\VCard;
-use Xaamin\Whatsapi\MessageManager;
-use Xaamin\Whatsapi\Events\Listener;
-use Xaamin\Whatsapi\Sessions\SessionInterface;
-use Xaamin\Whatsapi\Contracts\WhatsapiInterface;
-use Xaamin\Whatsapi\Contracts\ListenerInterface;
+use Gentrobot\Whatsapi\Media\VCard;
+use Gentrobot\Whatsapi\MessageManager;
+use Gentrobot\Whatsapi\Events\Listener;
+use Gentrobot\Whatsapi\Sessions\SessionInterface;
+use Gentrobot\Whatsapi\Contracts\WhatsapiInterface;
+use Gentrobot\Whatsapi\Contracts\ListenerInterface;
 
 class MGP25 implements WhatsapiInterface
 {
@@ -27,7 +27,7 @@ class MGP25 implements WhatsapiInterface
     /**
      * Message manager
      * 
-     * @var \Xaamin\Whatsapi\Whatsapi\MessageManager
+     * @var \Gentrobot\Whatsapi\Whatsapi\MessageManager
      */
     protected $manager;
 
@@ -41,14 +41,14 @@ class MGP25 implements WhatsapiInterface
     /**
      * Holds SessionInterface implementation
      * 
-     * @var Xaamin\Whatsapi\Sessions\SessionInterface
+     * @var Gentrobot\Whatsapi\Sessions\SessionInterface
      */
     protected $session;
 
     /**
      * Holds event listener
      * 
-     * @var \Xaamin\Whatsapi\Events\Listener
+     * @var \Gentrobot\Whatsapi\Events\Listener
      */
     protected $walistener;
 
@@ -110,7 +110,7 @@ class MGP25 implements WhatsapiInterface
     /**
      * Sets the Whatsapi event listener
      * 
-     * @param  \Xaamin\Whatsapi\Contracts\ListenerInterface $listener 
+     * @param  \Gentrobot\Whatsapi\Contracts\ListenerInterface $listener 
      * @return void
      */
     public function setListener(ListenerInterface $listener)
