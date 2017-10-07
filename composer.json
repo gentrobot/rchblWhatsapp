@@ -1,5 +1,5 @@
 {
-    "name": "gentrobot/whatsapi",
+    "name": "gentrobot/rchblWhatsapp",
     "description": "Wrapper for Whatsapp messenger",
     "license": "MIT",
     "keywords": [
@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": ">=5.6",        
-        "gentrobot/chat-api": "*"
+        "gentrobot/Chat-api": "1.0"
     },
     "suggest": {
         "illuminate/support": "For use on Laravel 5."
